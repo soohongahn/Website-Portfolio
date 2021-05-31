@@ -1,0 +1,43 @@
+.contact_container{
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 1200px;
+}
+
+.card{
+  width: 600px;
+  height: 353px;
+  transform-style: preserve-3d;
+  transition: 2s;
+  position: absolute;
+  cursor: pointer;
+}
+
+.side{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front{
+  background-image:url("front.png");
+  background-size: contain;
+}
+
+.back{
+  background-image:url("back.png");
+  background-size: contain;
+}
+
+.flip .card{
+  transform: rotateY(180deg);
+}
+
+.back{
+  transform: rotateY(180deg);
+}

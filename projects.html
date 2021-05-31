@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>Projects</title>
+    <style media="screen">
+      body{
+        background: #444140;
+      }
+
+      .swiper-container {
+        width: 80%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+
+      .swiper-pagination-bullet{
+        background: black;
+      }
+      .swiper-pagination-bullet-active {
+        background: white;
+        width: 10px;
+        height: 10px;
+        transition: .4s;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menubar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="https://jejudo.netlify.app/" target="_blank"><img src="images/web-jejudo.png" /></a>
+          <p>Website - Jejudo</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://arcadeworld.netlify.app/" target="_blank"><img src="images/web-arcadeworld.png" /></a>
+          <p>Website - Arcade World</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://susinsa.netlify.app/" target="_blank"><img src="./images/web-fashion.png" /></a>
+          <p>Website - Susinsa</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://chrome.google.com/webstore/detail/quick-youtube-search/glikfbmekciefodedaajifoljdebpkni" target="_blank"><img src="./images/chrome-extension.png" /></a>
+          <p>Chrome Extension - QuickYT</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="./1/index.html" target="_blank"><img src="./images/3d-loadingbars.png"/></a>
+          <p>3D - Loading Bars</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="./2/index.html" target="_blank"><img src="./images/3d-foldpaper.png" /></a>
+          <p>3D - Page Fold</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="./3/index.html" target="_blank"><img src="./images/3d-cube.png" /></a>
+          <p>3D - Rotate Cube</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="./4/index.html" target="_blank"><img src="./images/3d-coinflip.png" /></a>
+          <p>3D - Coin Flip</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="./5/index.html" target="_blank"><img src="./images/3d-cheezit.png" /></a>
+          <p>3D - Cheezit Box</p>
+        </div>
+        <div class="swiper-slide">
+          <a href="./6/index.html" target="_blank"><img src="./images/3d-card.png" /></a>
+          <p>3D - Business Card</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="footer">
+      <p>Created by Soohong Ahn. 05, 2021.</p>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 4,
+        allowTouchMove: false,
+        mousewheel: true,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: -100,
+          depth: 600,
+          modifier: 1,
+          slideShadows: false,
+        },
+
+        pagination: {
+          clickable: true,
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+  </body>
+</html>

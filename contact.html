@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Soohong Ahn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <style media="screen">
+      body{
+        background: #444140;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menubar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <div class="contact_container">
+      <div class="card">
+        <div class="side front"></div>
+        <div class="side back"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Created by Soohong Ahn. 05, 2021.</p>
+    </div>
+
+    <script>
+      var card = document.querySelector('.card');
+      card.addEventListener('click', function(){
+        document.body.classList.toggle('flip');
+      })
+    </script>
+  </body>
+</html>

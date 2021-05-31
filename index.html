@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Soohong Ahn</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="menubar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <div class="mainpage">
+      <div class="eye">
+        <div class="upperLid"></div>
+        <div class="iris">
+          <div class="pupil"></div>
+          <div class="light"></div>
+        </div>
+        <div class="lowerLid"></div>
+      </div>
+    </div>
+
+    <div class="title">
+      CODING MONSTER
+    </div>
+
+    <div class="footer">
+      <p>Created by Soohong Ahn. 05, 2021.</p>
+    </div>
+
+    <script>
+      document.querySelector('body').addEventListener('mousemove', eyeball);
+      function eyeball(){
+        var iris = document.querySelector('.iris');
+        let offsetLeft = iris.getBoundingClientRect().left;
+        let offsetTop = iris.getBoundingClientRect().top;
+        let width = iris.clientWidth;
+        let height = iris.clientHeight;
+        var centerX = offsetLeft + width / 2;
+        var centerY = offsetTop + height / 2;
+        let newX = event.pageX - centerX;
+        let newY = event.pageY - centerY;
+
+        if (newX > 100) newX = 100;
+        if (newX < 0) newX = 0;
+        if (newY > 96) newY = 96;
+        if (newY < 10) newY = 10;
+
+        setTimeout(function(){
+          iris.style =  "top: " + (newY/2) + "px;" + "left: " + (newX/2) + "px;";
+        }, 170)
+      }
+    </script>
+
+  </body>
+</html>
