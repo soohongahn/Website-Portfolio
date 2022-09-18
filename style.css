@@ -13,7 +13,7 @@ body{
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: #f76c5e;
+  background: #e56b6f;
   color: white;
   font-family: 'Itim';
 }
@@ -90,7 +90,7 @@ body{
 .upperLid, .lowerLid{
   width: 100%;
   height: 10%;
-  background: #ff6152;
+  background: #e56b6f;
   position: absolute;
   z-index: 10;
   animation: wink 5s ease-out infinite alternate;
